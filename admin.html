@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Painel ADM • ClickC</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="theme-light">
+<div class="app">
+  <header class="brand-header">
+    <div style="flex:1"></div>
+    <button id="themeToggle" class="theme-toggle" aria-label="Tema">☀️</button>
+  </header>
+  <section id="login" class="login">
+    <div class="card">
+      <h1 class="title">Entrar</h1>
+      <label class="field">
+        <span>Usuário</span>
+        <input id="admUser" type="text" placeholder="clickc">
+      </label>
+      <label class="field">
+        <span>Senha</span>
+        <input id="admPass" type="password" placeholder="••••••••">
+      </label>
+      <button id="loginBtn" class="primary">Acessar</button>
+      <p id="loginError" class="error hidden">Credenciais inválidas</p>
+    </div>
+  </section>
+  <section id="panel" class="panel hidden">
+    <div class="card">
+      <h1 class="title">Cadastro de Cliente</h1>
+      <label class="field">
+        <span>Nome da empresa</span>
+        <input id="clientName" type="text" placeholder="Contabilidade XY">
+      </label>
+      <label class="field">
+        <span>Slug da URL</span>
+        <input id="clientSlug" type="text" placeholder="contabilidadexy">
+      </label>
+      <label class="field">
+        <span>Cor principal</span>
+        <input id="clientColor" type="color" value="#6a5acd">
+      </label>
+      <label class="field">
+        <span>Logo (PNG)</span>
+        <input id="clientLogo" type="file" accept="image/png">
+      </label>
+      <button id="saveClient" class="primary">Salvar</button>
+      <p id="saveMsg" class="success hidden">Cliente salvo</p>
+    </div>
+    <div class="list" id="clientList"></div>
+  </section>
+</div>
+<script src="admin.js"></script>
+</body>
+</html>

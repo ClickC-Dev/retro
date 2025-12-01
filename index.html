@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Retrospectiva 2025</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="theme-light">
+<div id="app" class="app">
+  <header class="brand-header">
+    <img id="brandLogo" class="brand-logo" alt="Logo">
+    <button id="themeToggle" class="theme-toggle" aria-label="Tema">☀️</button>
+  </header>
+  <section id="landing" class="landing">
+    <div class="landing-box">
+      <h1 class="title">Retrospectiva 2025</h1>
+      <p class="subtitle">Preencha para desbloquear a sua retrospectiva</p>
+      <label class="field">
+        <span>Seu nome</span>
+        <input id="visitorName" type="text" placeholder="Ex.: João" autocomplete="name">
+      </label>
+      <label class="field">
+        <span>Nome da sua empresa</span>
+        <input id="visitorCompany" type="text" placeholder="Ex.: Mecânica do João">
+      </label>
+      <button id="startBtn" class="primary">Desbloquear minha Retrospectiva</button>
+    </div>
+  </section>
+  <section id="loading" class="loading hidden">
+    <div class="loading-box">
+      <div class="spinner"></div>
+      <p id="loadingText"></p>
+    </div>
+  </section>
+  <section id="retrospective" class="retrospective hidden">
+    <div class="slides" id="slides"></div>
+    <div class="nav">
+      <button id="prevBtn" class="ghost">Anterior</button>
+      <button id="nextBtn" class="ghost">Próximo</button>
+    </div>
+  </section>
+</div>
+<script src="client.js"></script>
+</body>
+</html>
