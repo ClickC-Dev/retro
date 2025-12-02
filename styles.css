@@ -22,8 +22,8 @@ repeating-linear-gradient(100deg,var(--black) 0%,var(--black) 7%,var(--transpare
 repeating-linear-gradient(100deg,var(--brand1) 10%,var(--brand2) 15%,var(--brand3) 20%,var(--brand4) 25%,var(--brand2) 30%)}
 .theme-dark .aurora::after{opacity:.05}
 @keyframes auroraMove{0%{background-position:0% 50%,50% 50%}50%{background-position:100% 50%,40% 60%}100%{background-position:0% 50%,50% 50%}}
-.brand-header{height:56px;display:flex;align-items:center;justify-content:center}
-.brand-logo{height:64px;max-width:70%;object-fit:contain}
+.brand-header{min-height:120px;display:flex;align-items:flex-start;justify-content:center;position:relative;padding-top:24px}
+.brand-logo{height:110px;max-width:80%;object-fit:contain;display:block;margin:0 auto}
 .title{font-size:1.5rem;margin:0 0 .75rem}
 .subtitle{margin:.25rem 0 1rem;color:var(--muted)}
 .landing .title,.landing .subtitle{text-align:center}
@@ -94,7 +94,7 @@ repeating-linear-gradient(100deg,var(--brand1) 10%,var(--brand2) 15%,var(--brand
 @keyframes twinkle{0%{opacity:.6}50%{opacity:.3}100%{opacity:.6}}
 /* ensure fixed poster aspect 1080x1350 at all widths */
 /* Theme selector */
-.theme-toggle{margin-left:auto;margin-right:12px;display:inline-flex;align-items:center;justify-content:center;width:64px;height:32px;border-radius:999px;border:1px solid rgba(var(--surface),.25);background:rgba(var(--surface),.08);color:var(--text);position:relative;overflow:hidden}
+.theme-toggle{position:absolute;top:12px;right:12px;display:inline-flex;align-items:center;justify-content:center;width:64px;height:32px;border-radius:999px;border:1px solid rgba(var(--surface),.25);background:rgba(var(--surface),.08);color:var(--text);overflow:hidden}
 .theme-toggle .icon{position:absolute;top:50%;transform:translateY(-50%);width:18px;height:18px}
 .theme-toggle .icon.sun{left:7px}
 .theme-toggle .icon.moon{right:9px}

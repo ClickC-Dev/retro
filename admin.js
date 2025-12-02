@@ -30,7 +30,7 @@ function renderList(){
     var stat=document.createElement("div");stat.style.color="var(--muted)";stat.textContent="Visualizações: "+count;
     meta.appendChild(name);meta.appendChild(stat);
     var actions=document.createElement("div");actions.className="actions";
-    var link=document.createElement("a");link.className="ghost";link.href=(location.hostname==="localhost"?"index.html#/":"/")+it.slug;link.target="_blank";link.textContent="Abrir link";
+    var link=document.createElement("a");link.className="ghost";link.href=(location.hostname==="localhost"?"index.html#/":"https://retro.clickc.com.br/")+it.slug;link.target="_blank";link.textContent="Abrir link";
     var copy=document.createElement("button");copy.className="ghost";copy.textContent="Copiar link";copy.onclick=function(h){return function(){navigator.clipboard.writeText(h)}}(link.href);
     var edit=document.createElement("button");edit.className="ghost";edit.textContent="Editar";edit.onclick=function(sl){return function(){var cli=findBySlug(sl);if(!cli)return;document.getElementById("clientName").value=cli.name;document.getElementById("clientSlug").value=cli.slug;document.getElementById("clientColor").value=cli.color||"#6a5acd";editSlug=sl;document.getElementById("saveClient").textContent="Atualizar"}}(it.slug);
     actions.appendChild(link);actions.appendChild(copy);actions.appendChild(edit);

@@ -2,6 +2,12 @@
   "version": 2,
   "routes": [
     { "src": "/admin", "dest": "/admin.html" },
-    { "src": "/.*", "dest": "/index.html" }
+    { "src": "/styles.css", "dest": "/styles.css" },
+    { "src": "/client.js", "dest": "/client.js" },
+    { "src": "/admin.js", "dest": "/admin.js" },
+    { "src": "/sb-config.json", "dest": "/sb-config.json" },
+    { "src": "/favicon.ico", "dest": "/favicon.ico" },
+    { "src": "/", "dest": "/index.html" },
+    { "src": "/((?!.*\.(?:css|js|png|jpg|jpeg|webp|svg|ico)).*)", "dest": "/index.html" }
   ]
 }
