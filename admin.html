@@ -30,6 +30,23 @@
   </section>
   <section id="panel" class="panel hidden">
     <div class="card">
+      <h1 class="title">Configurações do Supabase</h1>
+      <label class="field">
+        <span>URL do projeto</span>
+        <input id="sbUrl" type="url" placeholder="https://xxxx.supabase.co">
+      </label>
+      <label class="field">
+        <span>Anon Key</span>
+        <input id="sbKey" type="password" placeholder="chave pública">
+      </label>
+      <label class="field">
+        <span>Bucket</span>
+        <input id="sbBucket" type="text" placeholder="imagens">
+      </label>
+      <button id="saveSb" class="primary">Salvar Configuração</button>
+      <p id="sbMsg" class="success hidden">Configuração salva</p>
+    </div>
+    <div class="card">
       <h1 class="title">Cadastro de Cliente</h1>
       <label class="field">
         <span>Nome da empresa</span>
@@ -45,7 +62,7 @@
       </label>
       <label class="field">
         <span>Logo (PNG)</span>
-        <input id="clientLogo" type="file" accept="image/png">
+        <input id="clientLogo" type="file" accept="image/*">
       </label>
       <button id="saveClient" class="primary">Salvar</button>
       <p id="saveMsg" class="success hidden">Cliente salvo</p>
