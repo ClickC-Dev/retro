@@ -1,18 +1,8 @@
 {
-  "version": 2,
-  "routes": [
-    { "handle": "filesystem" },
-    { "src": "/admin", "dest": "/admin.html" },
-<<<<<<< HEAD
-    { "src": "/styles.css", "dest": "/styles.css" },
-    { "src": "/client.js", "dest": "/client.js" },
-    { "src": "/admin.js", "dest": "/admin.js" },
-    { "src": "/sb-config.json", "dest": "/sb-config.json" },
-    { "src": "/favicon.ico", "dest": "/favicon.ico" },
-    { "src": "/", "dest": "/index.html" },
-    { "src": "/((?!.*\.(?:css|js|png|jpg|jpeg|webp|svg|ico)).*)", "dest": "/index.html" }
-=======
-    { "src": "/(.*)", "dest": "/index.html" }
->>>>>>> b91defed075e1526daf5fb25fb1cabb8677d6952
-  ]
+"version": 2,
+"routes": [
+{ "handle": "filesystem" },
+{ "src": "/admin", "dest": "/admin.html" },
+{ "src": "/(.*)", "dest": "/index.html" }
+]
 }
