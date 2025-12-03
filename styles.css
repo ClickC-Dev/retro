@@ -23,7 +23,7 @@ repeating-linear-gradient(100deg,var(--brand1) 10%,var(--brand2) 15%,var(--brand
 .theme-dark .aurora::after{opacity:.05}
 @keyframes auroraMove{0%{background-position:0% 50%,50% 50%}50%{background-position:100% 50%,40% 60%}100%{background-position:0% 50%,50% 50%}}
 .brand-header{height:var(--header-h);display:flex;align-items:center;justify-content:center;position:relative;padding-top:8px}
-.brand-logo{height:86px;max-width:70%;object-fit:contain;display:block;margin:0 auto}
+.brand-logo{height:104px;max-width:80%;object-fit:contain;display:block;margin:0 auto}
 .title{font-size:1.5rem;margin:0 0 .75rem}
 .subtitle{margin:.25rem 0 1rem;color:var(--muted)}
 .landing .title,.landing .subtitle{text-align:center}
