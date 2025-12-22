@@ -36,8 +36,7 @@ async function diagnoseSupabaseDetailed(){var sb=getSb();var msg=document.getEle
   var testPath="logos/diagnose-"+Date.now()+".json";var writeOk=false, writeStatus=0, writeText="";try{var ru=await fetch(base+"/object/"+encodeURIComponent(sb.bucket)+"/"+testPath,{method:"POST",headers:Object.assign({"Content-Type":"application/json","x-upsert":"true"},headers),body:JSON.stringify({ok:true,ts:Date.now()})});writeOk=ru.ok;writeStatus=ru.status;try{writeText=await ru.text()}catch(_){writeText=""}}catch(_){writeOk=false}
   // 2) Teste leitura pública (rota public/)
   var publicOk=false, publicStatus=0;try{var rp=await fetch(base+"/object/public/"+encodeURIComponent(sb.bucket)+"/"+testPath,{method:"GET"});publicOk=rp.ok;publicStatus=rp.status}catch(_){publicOk=false}
-  // 3) Exclusão do teste
-  try{await fetch(base+"/object/"+encodeURIComponent(sb.bucket)+"/"+testPath,{method:"DELETE",headers:headers})}catch(_){}
+  // 3) Exclusão do teste (omitido quando não há permissão de DELETE)
   // 4) Bucket status (inferido)
   var hasBucket=writeOk||publicOk;
   // Mensagem final
